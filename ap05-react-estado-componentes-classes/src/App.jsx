@@ -20,7 +20,7 @@ class App extends React.Component {
 
   componentDidMount() {
     console.log("componentDidMount");
-    // this.obterLocalizacao();
+    this.obterLocalizacao();
   }
 
   componentDidUpdate() {
@@ -94,10 +94,17 @@ class App extends React.Component {
         </div>
         <div className="row">
           <div className="col-12">
-            {(!this.state.latitude && !this.state.mensagemDeErro) ? 
-              <Loading />
-              : 
-              this.state.mensagemDeErro ? 
+            {!this.state.latitude && !this.state.mensagemDeErro ? (
+                <>
+                  <Loading />
+                  <button
+                    onClick={this.obterLocalizacao}
+                    className="btn btn-outline-primary w-100 mt-2"
+                  >
+                    Qual a minha estação?
+                  </button>
+                </>
+              ) : this.state.mensagemDeErro ? 
               <p className="border rounded p-2 fs-1 text-center">
                 É preciso dar permissão para obter a localização. <br />
                 Atualize a página e tente de novo, ajustando a configuração do
