@@ -88,15 +88,15 @@ class App extends React.Component {
       <div className="container mt-2">
         <div className="row">
           <div className="col-12">
-            <Gato tamanho="2" />
-            <Gato tamanho="2" direcao="horizontal" />
+            <Gato tamanho="3" />
+            <Gato tamanho="3" direcao="horizontal" />
           </div>
         </div>
         <div className="row">
           <div className="col-12">
             {!this.state.latitude && !this.state.mensagemDeErro ? (
                 <>
-                  <Loading />
+                  <Loading texto='Por favor, libere o acesso a sua localização.'/>
                   <button
                     onClick={this.obterLocalizacao}
                     className="btn btn-outline-primary w-100 mt-2"
