@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    "@config-plugins/react-native-blob-util",
+    "@config-plugins/react-native-pdf"
+  ],
+  "name": "ap001-rn-pdf",
+  "slug": "ap001-rn-pdf"
+}
